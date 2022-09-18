@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import * as S from './Style'
 
 const Main = () => {
 
@@ -17,16 +18,22 @@ const Main = () => {
 
 
     return(
-        <>
-        {api.map((item)=>(
-            <div>
+        <S.MotherBox>
+        {api.map((item,index)=>(
+            index < 25 &&
+            <S.Card key={index}>
+            <S.ImageContainer>
+                <img src={item.image} alt={item.name}/>
+            </S.ImageContainer>
             <ul>
-                <li>name: {item.name}</li>
+                <li>Nome: {item.name}</li>
+                <li>Espécie: {item.species}</li>
+                <li>Gênero: {item.gender}</li>
+                <li>Casa: {item.house}</li>
             </ul>
-            <img src={item.image} alt={item.name}/>
-            </div>
+            </S.Card>
         ))}
-        </>
+        </S.MotherBox>
     )
 }
 

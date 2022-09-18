@@ -1,9 +1,15 @@
 import React from 'react'
 import Main from './Components/Main/Main'
+import Header from './Components/Header/Header'
+import { GlobalStyle } from './Components/Header/Style'
 
 const App = () => {
   return(
-    <Main/>
+    <section>
+      <GlobalStyle/>
+      <Header/>
+      <Main/>
+    </section>
   )
 }
 
