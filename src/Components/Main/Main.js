@@ -20,17 +20,17 @@ const Main = () => {
     return(
         <S.MotherBox>
         {api.map((item,index)=>(
-            index < 25 &&
+            index < 24 &&
             <S.Card key={index}>
             <S.ImageContainer>
-                <img src={item.image} alt={item.name}/>
+                <S.Image src={item.image} alt={item.name}/>
             </S.ImageContainer>
-            <ul>
-                <li>Nome: {item.name}</li>
-                <li>Espécie: {item.species}</li>
-                <li>Gênero: {item.gender}</li>
-                <li>Casa: {item.house}</li>
-            </ul>
+            <S.List>
+                <S.Info>Nome: {item.name}</S.Info>
+                <S.Info>Espécie: {item.species}</S.Info>
+                <S.Info>Gênero: {item.gender}</S.Info>
+                <S.Info>Casa: {item.house}</S.Info>
+            </S.List>
             </S.Card>
         ))}
         </S.MotherBox>

@@ -13,11 +13,22 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #CE6A85;
+    background: #801625;
+    @media screen and(max-width: 768px){
+        height: 200px;
+    }
+`
+
+export const MenuB = styled.button`
+    display: none;
+
+    @media screen and(max-width: 768px){
+        display: initial;
+    }
 `
 
 export const Navigation = styled.nav`
-    width: 100vw;
+    width: 100%;
     background: #1B2021;
 `
 
